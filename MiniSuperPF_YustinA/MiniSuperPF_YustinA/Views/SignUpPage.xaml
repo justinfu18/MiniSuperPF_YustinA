@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniSuperPF_YustinA.Views.SignUpPage">
+              
+
+
+    <ContentPage.Content>
+        <StackLayout Padding="20,20,20,20">
+
+            <Entry x:Name="TxtEmail" Placeholder="Email" Keyboard="Email">
+                
+            <Entry.Triggers>
+            <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                <Setter Property="BackgroundColor" Value="Yellow"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                        <Setter Property="FontSize" Value="25"/>
+                    </Trigger>
+                    </Entry.Triggers>
+            </Entry>
+            
+            <Entry x:Name="TxtPassword" Placeholder="Contraseña" >
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="FontSize" Value="25"/>
+                </Trigger>
+            </Entry.Triggers>
+            </Entry>
+        
+        
+            <Entry x:Name="TxtName" Placeholder="Nombre" >
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="FontSize" Value="25"/>
+                </Trigger>
+            </Entry.Triggers>
+            </Entry>
+            
+            
+            <Entry x:Name="TxtPhoneNumber" Placeholder="Telefono" Keyboard="Telephone">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="FontSize" Value="25"/>
+                </Trigger>
+            </Entry.Triggers>
+            </Entry>
+            
+            <Entry x:Name="TxtCardID" Placeholder="Cedula" Keyboard="Numeric" >
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="FontSize" Value="25"/>
+                </Trigger>
+            </Entry.Triggers>
+            </Entry>
+        
+            <Entry x:Name="TxtAddress" Placeholder="Direccion" >
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                    <Setter Property="FontSize" Value="25"/>
+                </Trigger>
+            </Entry.Triggers>
+                
+            </Entry>
+
+            <Picker x:Name="PickerUserRole" Title="Selecciona su Rol" ItemDisplayBinding="{Binding UserRoleDescription}" />
+        
+            <StackLayout Padding="0,200">
+                
+                <Button x:Name="BtnApply" Text="Aplicar" BackgroundColor="Orange" TextColor="White" FontAttributes="Bold" CornerRadius="10" Clicked="Aplicar_Cliked"/>
+                <Button x:Name="BtnCancel" Text="Cancelar" BackgroundColor="Orange" TextColor="White" FontAttributes="Bold" CornerRadius="10" Clicked="BtnCancel_Cliked"/>
+            </StackLayout>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
