@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace MiniSuperPF_YustinA.Models
 {
@@ -20,7 +21,7 @@ namespace MiniSuperPF_YustinA.Models
         public int UserId { get; set; } 
         public string Name { get; set; } = null!;
         public string Email { get; set; } = null!;
-        public string? CardId { get; set; } 
+        public string? CardId { get; set; }
         public string LoginPassword { get; set; } = null!;
         public string? Address { get; set; }
         public string PhoneNumber { get; set; } = null!;

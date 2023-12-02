@@ -4,31 +4,71 @@
              x:Class="MiniSuperPF_YustinA.Views.OptionsPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+
+            <FlexLayout Direction="Column">
+                
+            
                 
             <Label Text="Seleccione una opcion!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+                VerticalOptions="Start" 
+                HorizontalOptions="Start"
+                   VerticalTextAlignment="Center"
+                   FontSize="25"/>
 
-            <Grid Padding="50,0,50,0">
-
+            <Grid Padding="70,80,70,0">
 
                     <Grid.RowDefinitions>
-                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
                     </Grid.RowDefinitions>
-                    <FlexLayout Wrap="Wrap" JustifyContent="SpaceEvenly" Direction="Row"
-                            AlignContent="Start">
 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                                                         
 
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="BtnServiceManagment"
+                            Text="Gestion de servicios"
+                            BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            FontSize="17"
+                            CornerRadius="20"/>
 
-                        <Button x:Name="BtnServiceManagement" Text="Service Management" BackgroundColor="YellowGreen"/>
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="BtnUserManagment"
+                             Text="Gestion de Usuario"
+                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            FontSize="17"
+                            CornerRadius="20"/>
 
-                    </FlexLayout>
-               
-            </Grid>
+                    <Button Grid.Row="1" Grid.Column="0" x:Name="BtnScheduleManagment"
+                             Text="Horario"
+                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                             FontSize="17"
+                             CornerRadius="20"/>
                 
+                    <Button Grid.Row="1" Grid.Column="1" x:Name="BtnService"
+                             Text="Servicio"
+                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                             FontSize="17"
+                             CornerRadius="20"/>
+
+                    <Button Grid.Row="2" Grid.Column="1" x:Name="BtnProduct"
+                            Text="Productos"
+                            BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            FontSize="17"
+                            CornerRadius="20"/>
                 
-            </StackLayout>
+                    <Button Grid.Row="2" Grid.Column="1" x:Name="BtnOfert"
+                            Text="Ofertas"
+                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            FontSize="17"
+                            CornerRadius="20"/>
+
+                </Grid>
+
+            </FlexLayout>
+
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -16,13 +16,26 @@
 
 
             <Entry x:Name="TxtEmail" Placeholder=" Correo"  FontSize="20" VerticalOptions="StartAndExpand"  HorizontalOptions="Center" Keyboard="Email"/>
+            
+            
             <Entry x:Name="TxtPassword" Placeholder="Contraseña" FontSize="20" VerticalOptions="StartAndExpand"  HorizontalOptions="Center" Keyboard="Default" IsPassword="True"/>
+            <Switch x:Name="SwShowPassword" IsToggled="False" Toggled="SwShowPassword_Toggled" />
+
+
 
             <Button x:Name="BtnLogin" Text="Login" BackgroundColor="Chocolate" FontSize="20" HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked"/>
+
+            
             <Button x:Name="BtnSignUp" Text="Sign Up" BackgroundColor="Chocolate" FontSize="20" HorizontalOptions="CenterAndExpand" Clicked="BtnSignUp_Clicked"/>
-           
+ 
+            
+            
             <StackLayout Padding="0,200" >
-                <Label Text="Recuperar contraseña .." TextColor="Black" HorizontalOptions ="Center" />
+                <Label x:Name="LblPasswordRecovery"  Text="Recuperar contraseña .." TextColor="Black" HorizontalOptions ="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LblPasswordRecovery_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label> 
             </StackLayout>
            
 

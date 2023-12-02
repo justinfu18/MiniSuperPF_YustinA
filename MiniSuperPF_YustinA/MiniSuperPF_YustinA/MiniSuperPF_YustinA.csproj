@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="bin\**" />
+    <Compile Remove="obj\**" />
     <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="obj\**" />
     <None Remove="bin\**" />
+    <None Remove="obj\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +25,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Views\OptionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PasswordRecovery.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ServiceLoginPage.xaml">

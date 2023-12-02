@@ -15,3 +15,4 @@ namespace MiniSuperPF_YustinA.Services
         public static string KeyValue = "SKATER08JUS*";
     }
 }
+  

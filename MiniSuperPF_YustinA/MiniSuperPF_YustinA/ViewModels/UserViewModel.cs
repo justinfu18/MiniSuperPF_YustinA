@@ -12,14 +12,50 @@ namespace MiniSuperPF_YustinA.ViewModels
         public UserRole MyUserRole { get; set; }
         public UserStatus MyUserStatus { get; set; }
         public User MyUser { get; set; }
+        public UserDTO MyUserDTO { get; set; }
 
         public UserViewModel()
         {
             MyUserRole = new UserRole();
             MyUserStatus = new UserStatus();
             MyUser = new User();
-
+            MyUserDTO = new UserDTO();
         }
+
+        public async Task<UserDTO> GetUserData(string pEmail)
+        {
+            if (IsBusy) return null;
+            IsBusy = true;
+
+            try
+            {
+                UserDTO user = new UserDTO();
+
+                user = await MyUserDTO.GetUserData(pEmail);
+
+                if (user == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return user;
+                }
+                
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+
+
         public async Task<bool> UserAccessValidation(string pEmail, string pPassword)
         {
             if (IsBusy) return false;
