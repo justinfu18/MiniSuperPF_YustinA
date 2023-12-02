@@ -9,6 +9,10 @@ namespace MiniSuperPF_YustinA.ViewModels
 
     public class UserViewModel : BaseViewModel
     {
+        public Email MyEmail { get; set; }
+
+        public RecoveryCode MyRecoveryCode { get; set; }
+
         public UserRole MyUserRole { get; set; }
         public UserStatus MyUserStatus { get; set; }
         public User MyUser { get; set; }
@@ -20,6 +24,8 @@ namespace MiniSuperPF_YustinA.ViewModels
             MyUserStatus = new UserStatus();
             MyUser = new User();
             MyUserDTO = new UserDTO();
+            MyEmail = new Email();
+            MyRecoveryCode = new RecoveryCode();
         }
 
         public async Task<UserDTO> GetUserData(string pEmail)
@@ -145,6 +151,81 @@ namespace MiniSuperPF_YustinA.ViewModels
 
 
         }
+
+
+        public async Task<bool> AddRecoveryCode(string pEmail)
+
+        {
+            if (IsBusy) return false;
+            IsBusy = true;
+
+            try
+            {
+                MyRecoveryCode.Email = pEmail;
+
+                string RecoveryCode = "ABC123*";
+
+
+                MyRecoveryCode.RecoveryCode1 = RecoveryCode;
+                MyRecoveryCode.RecoveryCodeId = 0;
+
+                bool R = await MyRecoveryCode.AddRecoveryCode();
+
+                if (R)
+                {
+                    MyEmail.SendTo = pEmail;
+
+                    MyEmail.Subject = "MiniSuperPF Código de recuperación de contraseña";
+
+                    MyEmail.Message = string.Format("Su codigo de recuperacion es: {0}", RecoveryCode);
+
+                    R = MyEmail.SendEmail();
+                }
+
+
+                return R;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
+
+
+
+        }
+
+        public async Task<bool> RecoveryCodeValidation(string pEmail, string pRecoveryCode)
+        {
+            if (IsBusy) return false;
+            IsBusy = true;
+
+            try
+            {
+                MyRecoveryCode.Email = pEmail;
+                MyRecoveryCode.RecoveryCode1 = pRecoveryCode;
+
+
+                bool R = await MyRecoveryCode.ValidateRecoveryCode();
+                return R;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+
 
 
     }
