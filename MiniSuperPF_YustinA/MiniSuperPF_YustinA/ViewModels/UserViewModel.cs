@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using MiniSuperPF_YustinA.Models;
@@ -8,15 +9,23 @@ namespace MiniSuperPF_YustinA.ViewModels
 {
 
     public class UserViewModel : BaseViewModel
+
     {
         public Email MyEmail { get; set; }
-
         public RecoveryCode MyRecoveryCode { get; set; }
-
+        public Service MyService { get; set; }
+        
         public UserRole MyUserRole { get; set; }
         public UserStatus MyUserStatus { get; set; }
         public User MyUser { get; set; }
         public UserDTO MyUserDTO { get; set; }
+        
+
+       
+
+
+    
+
 
         public UserViewModel()
         {
@@ -26,6 +35,8 @@ namespace MiniSuperPF_YustinA.ViewModels
             MyUserDTO = new UserDTO();
             MyEmail = new Email();
             MyRecoveryCode = new RecoveryCode();
+            MyService = new Service();
+          
         }
 
         public async Task<UserDTO> GetUserData(string pEmail)
@@ -60,6 +71,41 @@ namespace MiniSuperPF_YustinA.ViewModels
             }
         }
 
+        public async Task<ObservableCollection<Service>> GetServiceList(int pUserID)
+        {
+
+            if (IsBusy) return null;
+            IsBusy = true;
+
+            try
+            {
+                ObservableCollection<Service> List = new ObservableCollection<Service>();
+
+                MyService.UserId = pUserID;
+
+                List = await MyService.GetServiceListByUser();
+
+
+                if (List == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return List;
+                }
+
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
 
 
         public async Task<bool> UserAccessValidation(string pEmail, string pPassword)
@@ -226,8 +272,39 @@ namespace MiniSuperPF_YustinA.ViewModels
         }
 
 
+        public async Task<bool> UpdateUser(string pUser)
+          
+        {
+            if (IsBusy) return false;
+            IsBusy = true;
+
+            try
+            {
+                MyUserDTO = pUser;
 
 
+                bool R = await MyUserDTO.UpdateUser();
+                return R;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
+
+
+
+        }
+
+        internal Task<bool> UpdateUser(UserDTO localUser)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

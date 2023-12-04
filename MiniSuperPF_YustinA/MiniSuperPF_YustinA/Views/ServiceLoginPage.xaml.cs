@@ -31,40 +31,40 @@ namespace MiniSuperPF_YustinA.Views
             //Login          
             bool R = false;
 
-           
 
-             if (TxtEmail.Text != null && ! string.IsNullOrEmpty(TxtEmail.Text.Trim()) &&
-               TxtPassword.Text != null && !string.IsNullOrEmpty(TxtPassword.Text.Trim()) )
-        
-               {
-                 try
-                  {
-                     UserDialogs.Instance.ShowLoading("Revisando el acceso de Usuario");
-                      await Task.Delay(2000);
-        
+
+            if (TxtEmail.Text != null && !string.IsNullOrEmpty(TxtEmail.Text.Trim()) &&
+              TxtPassword.Text != null && !string.IsNullOrEmpty(TxtPassword.Text.Trim()))
+
+            {
+                try
+                {
+                    UserDialogs.Instance.ShowLoading("Revisando el acceso de Usuario");
+                    await Task.Delay(2000);
+
                     string email = TxtEmail.Text.Trim();
                     string password = TxtPassword.Text.Trim();
 
-                   R = await viewModel.UserAccessValidation(email, password);
+                    R = await viewModel.UserAccessValidation(email, password);
 
 
-              }
-             catch (Exception)
-             {
+                }
+                catch (Exception)
+                {
 
-               throw;
+                    throw;
+                }
+                finally
+                {
+                    UserDialogs.Instance.HideLoading();
+                }
             }
-            finally
-           {
-               UserDialogs.Instance.HideLoading();
-          }
-           }
 
-         else
-          {
-            await DisplayAlert("Error de Validacion", "Correo y Contraseña son requeridos!", "OK");
-             return;
-         }
+            else
+            {
+                await DisplayAlert("Error de Validacion", "Correo y Contraseña son requeridos!", "OK");
+                return;
+            }
 
          if (R)
           {

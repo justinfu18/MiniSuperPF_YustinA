@@ -71,8 +71,56 @@ namespace MiniSuperPF_YustinA.Models
         }
 
 
+        public async Task<bool> UpdateUser()
+        {
+            try
+            {
+                string RouteSufix = string.Format("Users/{0}", this.IdUsuario);
+
+                string URL = Services.Connection.ProductionURLPrefix + RouteSufix;
+
+                RestClient client = new RestClient(URL);
+
+                Request = new RestRequest(URL, Method.Put);
+
+                //agrego la info del ApiKey
+
+                Request.AddHeader(Services.Connection.KeyName, Services.Connection.KeyValue);
+                Request.AddHeader(GlobalObjects.contenttype, GlobalObjects.minetype);
+
+                string SerealizedModel = JsonConvert.SerializeObject(this);
+                Request.AddBody(SerealizedModel, GlobalObjects.minetype);
 
 
+
+                RestResponse response = await client.ExecuteAsync(Request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+
+                if (statusCode == HttpStatusCode.OK)
+                {
+                    return true;
+
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                string ErrorMsg = ex.Message;
+                // almacernar registro de errores en bitacora
+
+                throw;
+            }
+        }
+
+        public static implicit operator UserDTO(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }

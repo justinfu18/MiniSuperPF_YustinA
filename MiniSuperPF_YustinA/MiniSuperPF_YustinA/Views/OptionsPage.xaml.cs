@@ -16,5 +16,18 @@ namespace MiniSuperPF_YustinA.Views
         {
             InitializeComponent();
         }
+
+        private async void BtnServiceManagment_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MyServiceListPage());
+        }
+
+        private async void BtnUserManagment_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserManagmentPage());
+        }
+
+
+
     }
 }

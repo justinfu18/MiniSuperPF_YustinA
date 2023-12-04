@@ -29,37 +29,45 @@
                     </Grid.ColumnDefinitions>
                                                          
 
-                    <Button Grid.Row="0" Grid.Column="0" x:Name="BtnServiceManagment"
+                    <Button Grid.Row="0" Grid.Column="0"
+                            x:Name="BtnServiceManagment"
                             Text="Gestion de servicios"
                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
                             FontSize="17"
-                            CornerRadius="20"/>
+                            CornerRadius="20"
+                            Clicked="BtnServiceManagment_Clicked"/>
 
-                    <Button Grid.Row="0" Grid.Column="1" x:Name="BtnUserManagment"
+                    <Button Grid.Row="0" Grid.Column="1" 
+                            x:Name="BtnUserManagment"
                              Text="Gestion de Usuario"
                              BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
                             FontSize="17"
-                            CornerRadius="20"/>
+                            CornerRadius="20"
+                            Clicked="BtnUserManagment_Clicked"/>
 
-                    <Button Grid.Row="1" Grid.Column="0" x:Name="BtnScheduleManagment"
+                    <Button Grid.Row="1" Grid.Column="0" 
+                            x:Name="BtnScheduleManagment"
                              Text="Horario"
                              BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
                              FontSize="17"
                              CornerRadius="20"/>
                 
-                    <Button Grid.Row="1" Grid.Column="1" x:Name="BtnService"
+                    <Button Grid.Row="1" Grid.Column="1" 
+                            x:Name="BtnService"
                              Text="Servicio"
                              BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
                              FontSize="17"
                              CornerRadius="20"/>
 
-                    <Button Grid.Row="2" Grid.Column="1" x:Name="BtnProduct"
+                    <Button Grid.Row="2" Grid.Column="1" 
+                            x:Name="BtnProduct"
                             Text="Productos"
                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
                             FontSize="17"
                             CornerRadius="20"/>
                 
-                    <Button Grid.Row="2" Grid.Column="1" x:Name="BtnOfert"
+                    <Button Grid.Row="2" Grid.Column="1" 
+                            x:Name="BtnOfert"
                             Text="Ofertas"
                              BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
                             FontSize="17"

@@ -22,7 +22,8 @@ namespace MiniSuperPF_YustinA.Views
         }           
         private async void BtnSendRecoveryCode_Clicked(object sender, EventArgs e)
         {
-if (!string.IsNullOrEmpty(TxtEmail.Text.Trim()))
+
+            if (!string.IsNullOrEmpty(TxtEmail.Text.Trim()))
             {
                 bool R = await viewModel.AddRecoveryCode(TxtEmail.Text.Trim());
                 if (R)

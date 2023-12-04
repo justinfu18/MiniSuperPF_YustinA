@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniSuperPF_YustinA.Views.MyServiceListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Mi lista de Seervicios"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <ListView x:Name="LstServiceList" RowHeight="200" SeparatorVisibility="Default" Background="Orange">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ImageCell Text="{Binding Notes}"
+                                   Detail="{Binding ServiceDate}"
+                                   ImageSource="xamarin_logo"
+                                   TextColor="Black"
+                                   DetailColor="Black"/>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
