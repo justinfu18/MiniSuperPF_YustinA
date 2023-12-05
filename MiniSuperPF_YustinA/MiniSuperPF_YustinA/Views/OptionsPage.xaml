@@ -9,7 +9,7 @@
                 
             
                 
-            <Label Text="Seleccione una opcion!"
+            <Label Text="           ¡Seleccione una opcion!"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start"
                    VerticalTextAlignment="Center"
@@ -59,7 +59,7 @@
                              FontSize="17"
                              CornerRadius="20"/>
 
-                    <Button Grid.Row="2" Grid.Column="1" 
+                    <Button Grid.Row="2" Grid.Column="0" 
                             x:Name="BtnProduct"
                             Text="Productos"
                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
