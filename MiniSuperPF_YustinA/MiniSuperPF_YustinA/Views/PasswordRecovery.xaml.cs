@@ -33,5 +33,11 @@ namespace MiniSuperPF_YustinA.Views
                 }
             }
         }
+
+        private async void BtnCancelar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+       
     }
 }

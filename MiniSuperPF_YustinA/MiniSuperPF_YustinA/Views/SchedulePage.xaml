@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniSuperPF_YustinA.Views.SchedulePage"
+             Shell.NavBarIsVisible="False"         
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="Naranja.PNG" >
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Horario de Atención del dia lunes 4  de diciembre al domingo 10 de
+                   diciembre:"
+           TextColor="White"
+        VerticalOptions="Center" 
+        HorizontalOptions="Fill"
+             Padding="30,50,0,0"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   
+                    />
+
+
+            <Label  Text="Lunes de 8am a 7pm." FontSize="20" FontAttributes="Bold" Padding="80,30,0,0" TextColor="White"/>
+
+            <Label Text="Martes de 8am a 7pm." FontSize="20" FontAttributes="Bold" Padding="80,30,0,0" TextColor="White"/>
+
+            <Label Text="Miercoles de 7am a 7pm." FontSize="20" FontAttributes="Bold" Padding="80,30,0,0" TextColor="White"/>
+
+            <Label Text="Jueves de 7am a 7pm." FontSize="20" FontAttributes="Bold" Padding="80,30,0,0" TextColor="White"/>
+
+            <Label Text="Viernes de 7am a 7pm." FontSize="20" FontAttributes="Bold" Padding="80,30,0,0" TextColor="White"/>
+
+            <Label Text="Sabado de 7am a 6pm." FontSize="20" FontAttributes="Bold" Padding="80,30,0,0" TextColor="White"/>
+
+            <Label Text="Domingo de 7am a 6pm." FontSize="20" Padding="80,30,0,0" TextColor="White" FontAttributes="Bold" />
+
+            <Label Text="Si desea saber alguna información adicional se pueden comunicar directamente al numero 24453698.
+                   ¡Será un gusto Atenderles!"
+                         TextColor="White"
+                         VerticalOptions="Center" 
+                         HorizontalOptions="Fill"
+                         Padding="30,50,0,0"
+                         FontSize="20"
+                         FontAttributes="Bold"/>
+
+
+            <Button x:Name="BtnCancel" Margin="0,20,0,0" Text="Regresar" BackgroundColor="Orange" TextColor="White" FontAttributes="Bold" CornerRadius="50" WidthRequest="200" Clicked="BtnCancel_Cliked" FontSize="20" HorizontalOptions="CenterAndExpand" Padding="10,0,0,0" />
+        </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>

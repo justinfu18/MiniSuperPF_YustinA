@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiniSuperPF_YustinA.Views.OptionsPage">
+             x:Class="MiniSuperPF_YustinA.Views.OptionsPage"
+                   Shell.NavBarIsVisible="False"         
+            NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="Orange.PNG"
+             Padding="0,50,0,0">
     <ContentPage.Content>
         <ScrollView>
 
@@ -13,7 +17,9 @@
                 VerticalOptions="Start" 
                 HorizontalOptions="Start"
                    VerticalTextAlignment="Center"
-                   FontSize="25"/>
+                   FontSize="25"
+                   TextColor="White"
+                   FontAttributes="Bold"/>
 
             <Grid Padding="70,80,70,0">
 
@@ -29,53 +35,78 @@
                     </Grid.ColumnDefinitions>
                                                          
 
-                    <Button Grid.Row="0" Grid.Column="0"
+                    <Button Grid.Row="0" Grid.Column="0"                         
+                            FontAttributes="Bold"
+                            TextColor="White"
                             x:Name="BtnServiceManagment"
                             Text="Gestion de servicios"
-                            BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            BackgroundColor="Coral" HeightRequest="150" WidthRequest="100"
                             FontSize="17"
                             CornerRadius="20"
                             Clicked="BtnServiceManagment_Clicked"/>
 
                     <Button Grid.Row="0" Grid.Column="1" 
+                            FontAttributes="Bold"
+                            TextColor="White"
                             x:Name="BtnUserManagment"
                              Text="Gestion de Usuario"
-                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                             BackgroundColor="Coral" HeightRequest="150" WidthRequest="100"
                             FontSize="17"
                             CornerRadius="20"
                             Clicked="BtnUserManagment_Clicked"/>
 
                     <Button Grid.Row="1" Grid.Column="0" 
+                            FontAttributes="Bold"
+                            TextColor="White"
                             x:Name="BtnScheduleManagment"
                              Text="Horario"
-                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                             BackgroundColor="Coral" HeightRequest="150" WidthRequest="100"
                              FontSize="17"
-                             CornerRadius="20"/>
-                
-                    <Button Grid.Row="1" Grid.Column="1" 
-                            x:Name="BtnService"
-                             Text="Servicio"
-                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
-                             FontSize="17"
-                             CornerRadius="20"/>
+                             CornerRadius="20"
+                            Clicked="BtnScheduleManagment_Clicked"/>
 
-                    <Button Grid.Row="2" Grid.Column="0" 
+                    <Button Grid.Row="1" Grid.Column="1" 
+                            FontAttributes="Bold"
+                            TextColor="White"
                             x:Name="BtnProduct"
                             Text="Productos"
-                            BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            BackgroundColor="Coral" HeightRequest="150" WidthRequest="100"
                             FontSize="17"
-                            CornerRadius="20"/>
-                
-                    <Button Grid.Row="2" Grid.Column="1" 
-                            x:Name="BtnOfert"
-                            Text="Ofertas"
-                             BackgroundColor="Red" HeightRequest="150" WidthRequest="100"
+                            CornerRadius="20"
+                            Clicked="BtnProducto_Clicked"/>
+
+                    <Button  Grid.Row="2" Grid.Column="0"
+                             FontAttributes="Bold"
+                             TextColor="White"
+                             x:Name="BtnOfert"
+                                Text="Ofertas"
+                            BackgroundColor="Coral" HeightRequest="50"
+                            WidthRequest="0"
                             FontSize="17"
-                            CornerRadius="20"/>
+                            CornerRadius="20"
+                            Clicked="BtnOfert_Clicked"/>
+
+
 
                 </Grid>
 
+                
+
+                <StackLayout Margin="0,80,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+
+                    <Button x:Name="BtnCancel" Text="Regresar" BackgroundColor="Coral" 
+                    TextColor="White" FontAttributes="Bold" CornerRadius="50"
+                    WidthRequest="200" Clicked="BtnCancel_Cliked" 
+                    FontSize="20" HorizontalOptions="CenterAndExpand" 
+                    Padding="0,0,0,0" />
+
+                </StackLayout>
+
+
             </FlexLayout>
+
+            
+            
 
         </ScrollView>
     </ContentPage.Content>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniSuperPF_YustinA.Views.OfertPage"
+                Shell.NavBarIsVisible="False"         
+          NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="Fond.PNG"
+             >
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+
+                <Label Text="Ofertas a Disposicion:"
+           TextColor="Black"
+        VerticalOptions="Center" 
+        HorizontalOptions="Fill"
+             Padding="100,20,0,30" FontSize="20"
+                       FontAttributes="Bold"
+                    />
+
+
+
+
+                <Image Source="Coca.PNG" />
+                <Label Text="Coca Cola Light 2litros" TextColor="Black" FontAttributes="Bold" Padding="130,0,0,10">
+
+                </Label>
+
+                <Label Text="Oferta de Coca Cola Light 2Litros en 1000colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="arroz.PNG"/>
+                <Label Text="Arroz Indiana 99% Grano Entero 1800gr" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+                <Label Text="Oferta Arroz Indiana 99% Grano Entero 1,8gr 1500colones " TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="mmio.PNG"/>
+                <Label Text="Helado MMIO Dos Pinos" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Oferta Helado MMIO Dos Pinos 500colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="azucar.PNG"/>
+                <Label Text="Azucar Doña Maria Regular Blanca -1000gr " TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Oferta Azucar Doña Maria Regular Blanca -1000gr 600colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="frijol.PNG"/>
+                <Label Text="Frijol Negro Indiana -800gr" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Oferta Frijol Negro Indiana -800gr 1000colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="oreo.PNG" WidthRequest="150"/>
+                <Label Text="Galleta Oreo Original Doble Galleta De Chocolate Con Crema Sabor A Vainilla -432g" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Oferta Galleta Oreo original, Paquete de 6 unidades 1000colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+
+                <Image Source="promoatun.PNG" WidthRequest="150"/>
+                <Label Text="3 Pack Atún Calvo Trocitos Aceite -426gr" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text=" Oferta 3 Pack Atún Calvo Trocitos Aceite  426gr 2800colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="treepack.PNG" WidthRequest="150"/>
+                <Label Text="Gaseosa Coca Cola+fresca+fuze tea, 3pack - 7.5L" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text=" Oferta Gaseosa Coca Cola+fresca+fuze tea, 3pack - 7.5L 3000colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+
+                <Image Source="Jugo.PNG" WidthRequest="150"/>
+                <Label Text="Jugo De Naranja Dos Pinos 6 Pack - 1Lt" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Oferta Jugo De Naranja Dos Pinos 6 Pack - 1Lt 7800colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+
+                <Image Source="Picarita.PNG" WidthRequest="150"/>
+                <Label Text="8 pack snacks surtidos jacks 206g" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text=" Oferta 8 pack snacks surtidos jacks 206gs 1700colones" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                
+                <Button x:Name="BtnCancel" Text="Regresar" BackgroundColor="Orange" TextColor="White" FontAttributes="Bold" CornerRadius="50" WidthRequest="200" Clicked="BtnCancel_Cliked" FontSize="20" HorizontalOptions="CenterAndExpand" Padding="0,0,0,0" />
+            </StackLayout>
+
+        </ScrollView>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

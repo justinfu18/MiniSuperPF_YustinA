@@ -7,8 +7,8 @@ namespace MiniSuperPF_YustinA.Services
     public static class Connection
     {
         // definimos prefijo de consumo de las rutas
-        public static string ProductionURLPrefix = "http://192.168.0.13:45455/api/";
-        public static string TestingURLPrefix = "http://192.168.0.13:45455/api/";
+        public static string ProductionURLPrefix = "http://192.168.0.3:45455/api/";
+        public static string TestingURLPrefix = "http://192.168.0.3:45455/api/";
 
 
         public static string KeyName = "MiniSuperPF_ApiKey";

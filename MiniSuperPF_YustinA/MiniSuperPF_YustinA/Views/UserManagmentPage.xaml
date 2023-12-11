@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiniSuperPF_YustinA.Views.UserManagmentPage">
+             x:Class="MiniSuperPF_YustinA.Views.UserManagmentPage"
+                Shell.NavBarIsVisible="False"         
+                NavigationPage.HasNavigationBar="False"
+               BackgroundImageSource="ListServ.PNG">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Padding="20,20,20,20">
@@ -9,35 +12,22 @@
                 <Entry x:Name="TxtID" IsEnabled="False" FontSize="Large" VerticalTextAlignment="Center"/>
 
 
-                <Entry x:Name="TxtEmail" Placeholder="Email" Keyboard="Email">
-
+                <Entry x:Name="TxtEmail" Placeholder="Email" Keyboard="Email" TextColor="White">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                            <Setter Property="BackgroundColor" Value="Yellow"/>
-                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="BackgroundColor" Value="Orange"/>
+                            <Setter Property="TextColor" Value="White"/>
                             <Setter Property="FontAttributes" Value="Bold"/>
                             <Setter Property="FontSize" Value="25"/>
                         </Trigger>
                     </Entry.Triggers>
                 </Entry>
 
-                <Entry x:Name="TxtPassword" Placeholder="Contraseña" MaxLength="60">
+                <Entry x:Name="TxtPassword" Placeholder="Contraseña" MaxLength="60" TextColor="White">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                            <Setter Property="BackgroundColor" Value="Yellow"/>
-                            <Setter Property="TextColor" Value="Black"/>
-                            <Setter Property="FontAttributes" Value="Bold"/>
-                            <Setter Property="FontSize" Value="25"/>
-                        </Trigger>
-                    </Entry.Triggers>
-                </Entry>
-
-
-                <Entry x:Name="TxtName" Placeholder="Nombre" >
-                    <Entry.Triggers>
-                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                            <Setter Property="BackgroundColor" Value="Yellow"/>
-                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="BackgroundColor" Value="Orange"/>
+                            <Setter Property="TextColor" Value="White"/>
                             <Setter Property="FontAttributes" Value="Bold"/>
                             <Setter Property="FontSize" Value="25"/>
                         </Trigger>
@@ -45,33 +35,45 @@
                 </Entry>
 
 
-                <Entry x:Name="TxtPhoneNumber" Placeholder="Telefono" Keyboard="Telephone">
+                <Entry x:Name="TxtName" Placeholder="Nombre" TextColor="White">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                            <Setter Property="BackgroundColor" Value="Yellow"/>
-                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="BackgroundColor" Value="Orange"/>
+                            <Setter Property="TextColor" Value="White"/>
                             <Setter Property="FontAttributes" Value="Bold"/>
                             <Setter Property="FontSize" Value="25"/>
                         </Trigger>
                     </Entry.Triggers>
                 </Entry>
 
-                <Entry x:Name="TxtCardID" Placeholder="Cedula" Keyboard="Numeric" >
+
+                <Entry x:Name="TxtPhoneNumber" Placeholder="Telefono" Keyboard="Telephone" TextColor="White">
                     <Entry.Triggers>
                         <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                            <Setter Property="BackgroundColor" Value="Yellow"/>
-                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="BackgroundColor" Value="Orange"/>
+                            <Setter Property="TextColor" Value="White"/>
                             <Setter Property="FontAttributes" Value="Bold"/>
                             <Setter Property="FontSize" Value="25"/>
                         </Trigger>
                     </Entry.Triggers>
                 </Entry>
 
-                <Entry x:Name="TxtAddress" Placeholder="Direccion" >
+                <Entry x:Name="TxtCardID" Placeholder="Cedula" Keyboard="Numeric" TextColor="White" >
                     <Entry.Triggers>
                         <Trigger TargetType="Entry" Property="IsFocused" Value="True">
-                            <Setter Property="BackgroundColor" Value="Yellow"/>
-                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="BackgroundColor" Value="Orange"/>
+                            <Setter Property="TextColor" Value="White"/>
+                            <Setter Property="FontAttributes" Value="Bold"/>
+                            <Setter Property="FontSize" Value="25"/>
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+
+                <Entry x:Name="TxtAddress" Placeholder="Direccion" TextColor="White">
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Orange"/>
+                            <Setter Property="TextColor" Value="White"/>
                             <Setter Property="FontAttributes" Value="Bold"/>
                             <Setter Property="FontSize" Value="25"/>
                         </Trigger>

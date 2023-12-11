@@ -27,7 +27,30 @@ namespace MiniSuperPF_YustinA.Views
             await Navigation.PushAsync(new UserManagmentPage());
         }
 
+        private async void BtnScheduleManagment_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SchedulePage()); 
+        }
 
+        private async void BtnService_Clicked(object sender, EventArgs e) //Se creo este boton
+        {
+            await Navigation.PushAsync(new ServicePage());
+        }
 
+       
+        private async void BtnProducto_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProductPage());
+        }
+
+        private async void BtnOfert_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OfertPage());
+        }
+
+        private async void BtnCancel_Cliked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

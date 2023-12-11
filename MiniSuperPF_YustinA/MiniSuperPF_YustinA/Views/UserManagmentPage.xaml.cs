@@ -47,16 +47,16 @@ namespace MiniSuperPF_YustinA.Views
                 BackUpUser = GlobalObjects.LocalUser;
 
 
-                GlobalObjects.LocalUser.Nombre = TxtName.Text.Trim();
-                GlobalObjects.LocalUser.Correo = TxtEmail.Text.Trim();
-                GlobalObjects.LocalUser.NumeroTelefono = TxtPhoneNumber.Text.Trim();
-                GlobalObjects.LocalUser.Cedula = TxtCardID.Text.Trim();
-                GlobalObjects.LocalUser.Direccion = TxtAddress.Text.Trim();
+                BackUpUser.Nombre = TxtName.Text.Trim();
+                BackUpUser.Correo = TxtEmail.Text.Trim();
+                BackUpUser.NumeroTelefono = TxtPhoneNumber.Text.Trim();
+                BackUpUser.Cedula = TxtCardID.Text.Trim();
+                BackUpUser.Direccion = TxtAddress.Text.Trim();
 
 
                 if (TxtPassword.Text != null && !string.IsNullOrEmpty(TxtPassword.Text.Trim()))
                 {
-                    GlobalObjects.LocalUser.Contrasennia = TxtPassword.Text.Trim();
+                    BackUpUser.Contrasennia = TxtPassword.Text.Trim();
                 }
                 var answer = await DisplayAlert("Confirmacion requerida", "Estas segur(a) de cambiar tu informacion", "Yes", "No");
 
@@ -64,7 +64,7 @@ namespace MiniSuperPF_YustinA.Views
                 {
                     try
                     {
-                        bool R = await vm.UpdateUser(GlobalObjects.LocalUser);
+                        bool R = await vm.UpdateUser(BackUpUser);
 
 
                         if (R)

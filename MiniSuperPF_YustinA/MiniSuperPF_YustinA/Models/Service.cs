@@ -35,7 +35,7 @@ namespace MiniSuperPF_YustinA.Models
         {
             try
             {
-                string RouteSufix = string.Format("Services/GetServiceListByUser?pUserID=1{0}", this.UserId);
+                string RouteSufix = string.Format("Services/GetServiceListByUser?pUserID={0}", this.UserId);
 
                 string URL = Services.Connection.ProductionURLPrefix + RouteSufix;
 

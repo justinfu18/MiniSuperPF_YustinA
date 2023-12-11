@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiniSuperPF_YustinA.Views.ProductPage"
+                Shell.NavBarIsVisible="False"         
+                    NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="Fond.PNG">
+
+<ContentPage.Content>
+    <ScrollView>
+
+        <StackLayout>
+
+            <Label Text="Productos a Disposicion:"
+           TextColor="Black"
+        VerticalOptions="Center" 
+        HorizontalOptions="Fill"
+             Padding="90,20,0,30" FontSize="20"
+                   FontAttributes="Bold"
+                    />
+
+
+
+
+            <Image Source="Aceite.PNG" WidthRequest="100"/>
+                <Label Text="Aceite de Soya Ideal" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="Aceite vegetal de soya, elaborado a partir de semillas de soya, es rico en ácidos grasos esenciales, vitamina E y fitoesteroles. Se utiliza en la industria alimentaria, farmacéutica y cosmética." TextColor="Black" Padding="20,0,0,50"></Label>
+              
+                <Image Source="Pepsi.PNG" WidthRequest="100"/>
+                <Label Text="Bebida Gasificada Pepsi Cola Pet" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+                <Label Text="Es una bebida refrescante en el auténtico sentido de la palabra que típicamente contiene agua carbonatada, un endulzante y un sabor, estos pueden ser naturales o artificiales, dando la satisfacción que nos merecemos para elevar los peque" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="Frijo.PNG" WidthRequest="100"/>
+                <Label Text="Frijol Rojo Indiana Bolsa" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="Frijol Rojo Indiana Bolsa - 800gr es un producto elaborado con frijol rojo, una legumbre que se cultiva en todo el mundo. Se trata de un alimento rico en proteínas, minerales y vitaminas, que tiene un sabor delicioso y es muy versátil en la cocina" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="tiope.PNG" WidthRequest="100"/>
+                <Label Text="Arroz Tio Pelon 99% Grano Entero" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="El arroz Tio Pelon enriquecido 99% grano entero- 4000 gr, es un producto que está compuesto por arroz enriquecido 99% grano entero. Este producto es ideal para ser consumido por personas que desean cuidar su salud" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="oreopeque.PNG" WidthRequest="100" />
+                <Label Text="Galleta Oreo Original Doble Galleta De Chocolate Con Crema Sabor A Vainilla -432g" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="Galleta Oreo original, doble gallera de chocolate con crema sabor a vainilla, son ideales compartir en familia, disfrutar en fiestas, colaciones y recetas" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="Cafe.PNG" WidthRequest="100"/>
+                <Label Text="Café Montaña Puro" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="Café Montaña es un café 100% puro de Costa Rica, que se obtiene de las mejores zonas productoras de café de altura del país." TextColor="Black" Padding="20,0,0,50"></Label>
+
+
+                <Image Source="azucar.PNG" WidthRequest="100"/>
+                <Label Text="Azúcar Doña María" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="El azúcar es una sustancia compuesta de hidrógeno y carbono, de fórmula química C12H22O11. Es una de las principales fuentes de energía para el organismo y se utiliza en numerosos procesos metabólicos." TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="recreo.PNG" WidthRequest="100"/>
+                <Label Text="Galletas Recreo Pozuelo" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="Deliciosas galletas Recreo rellenas de crema sabor vainilla, una perfecta opción para disfrutar en cualquier momento del día. Presentación en bolsa de 384 gramos con 8 paquetes." TextColor="Black" Padding="20,0,0,50"></Label>
+
+
+                <Image Source="carne.PNG" WidthRequest="100"/>
+                <Label Text="Carnitas De Pollo Marinado BBQ Don Cristobal" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+            </Label>
+
+                <Label Text="Carnitas De Pollo Marinado BBQ Don Cristobal, Empacado, Precio indicado por Kilo" TextColor="Black" Padding="20,0,0,50"></Label>
+
+                <Image Source="Nati.PNG" WidthRequest="100"/>
+                <Label Text="NATILLA SAL LA GRANJA DOS PINOS 300GRS" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Este producto es pasteurizado y homogenizado. Ideal para tus comidas y para preparar tus recetas favoritas." TextColor="Black" Padding="20,0,0,50"></Label>
+               
+            <Image Source="NUMAR.PNG" WidthRequest="100"/>
+                <Label Text="Margarina Numar Caja - 500Gr" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="La marca NUMAR tiene su origen de dos palabras en inglés: NUTRITIOUS y MARGARINE, y al día de hoy es una familia de margarinas de primera calidad, producidas con tecnologías de punta bajo estándares estrictos de calidad." TextColor="Black" Padding="20,0,0,50"></Label>
+                
+            
+            <Image Source="Fideo.PNG" WidthRequest="100"/>
+                <Label Text="Pasta Cabello Roma -300gr" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Es una pasta hecha a base de harina de trigo, huevo y agua. Tiene una textura suave y un sabor delicado. Es ideal para preparar platos como fideos, tallarines y macarrones." TextColor="Black" Padding="20,0,0,50"></Label>
+               
+                <Image Source="atun.PNG" WidthRequest="100"/>
+                <Label Text="Atún Calvo Lomo En Trocitos En Aceite -142gr" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Por su característica de pescado azul es un alimento graso, aunque es una grasa rica en ácidos grasos omega 3 que ayudan a reducir los niveles en sangre de triglicéridos, disminuyendo el riesgo de aterosclerosis." TextColor="Black" Padding="20,0,0,50"></Label>
+                
+            
+                <Image Source="Banano.PNG" WidthRequest="100"/>
+                <Label Text="Banano Selección Especial Kilo" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Productos fabricados con ingredientes certificados sostenibles por una organización ambientalmente reconocida, y que no son dañinos para el ambiente." TextColor="Black" Padding="20,0,0,50"></Label>
+               
+            
+                <Image Source="Manzana.PNG" WidthRequest="100"/>
+                <Label Text="Manzana Mixta Empacada 1.5 Kilo" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Manzana Mixta Empacada 1.5 Kilo -12 a 13 Unidades Aproximadamente" TextColor="Black" Padding="20,0,0,50"></Label>
+               
+                <Image Source="Cloro.PNG" WidthRequest="100"/>
+                <Label Text="Cloro Clorox Fragancia Original Galón, Triple Acción - 3785ml" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Blanqueador y desinfectante aroma original. Triple acción, especial para limpieza y desinfección de superficies" TextColor="Black" Padding="20,0,0,50"></Label>
+                
+                <Image Source="nevax.PNG" WidthRequest="100"/>
+                <Label Text="Toallas De Papel Nevax Ultra absorb - 3 Rollos" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Nevax® Ultra Absorb es el experto en la cocina gracias a su tecnología Maxi Circulos ofrece hasta 2 veces más absorción de grasas y líquidos, Es el Especialista en Absorción." TextColor="Black" Padding="20,0,0,50"></Label>
+               
+                <Image Source="Alum.PNG" WidthRequest="100"/>
+                <Label Text="Papel Aluminio Pali, Almacenaje Alimentos, Caja - 25 Pies" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Papel aluminio resistente" TextColor="Black" Padding="20,0,0,50"></Label>
+                
+                <Image Source="Yougu.PNG" WidthRequest="100"/>
+                <Label Text="Yogurt Líquido Coronado Sabor Frutas, Semidescremado- 1Lt" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Disfruta 1 litro del delicioso Yogurt Líquido Coronado, sabor a frutas, semidescremado, pasteurizado. Ideal para el desayuno, sólo o con tus cereales favoritos o para acompañar tus meriendas." TextColor="Black" Padding="20,0,0,50"></Label>
+                
+            
+                <Image Source="leche.PNG" WidthRequest="100"/>
+                <Label Text="Leche Dos Pinos Líquida Homogenizada 2% Grasa -3785Ml" TextColor="Black" FontAttributes="Bold" Padding="130,10">
+
+                </Label>
+
+                <Label Text="Leche homogenizada 2% grasa de Dos Pinos. Contiene leche, agua, aceite vegetal, lactosa, minerales, vitaminas y conservadores" TextColor="Black" Padding="20,0,0,50"></Label>
+
+
+                <Button x:Name="BtnCancel" Text="Regresar" BackgroundColor="Orange" TextColor="White" FontAttributes="Bold" CornerRadius="50" WidthRequest="200" Clicked="BtnCancel_Cliked" FontSize="20" HorizontalOptions="CenterAndExpand" Padding="0,0,0,0" />
+        </StackLayout>
+
+    </ScrollView>
+
+
+
+</ContentPage.Content>
+</ContentPage>

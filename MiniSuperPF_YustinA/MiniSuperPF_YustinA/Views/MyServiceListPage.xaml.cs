@@ -31,5 +31,10 @@ namespace MiniSuperPF_YustinA.Views
         {
             LstServiceList.ItemsSource = await vm.GetServiceList(pUserID);
         }
+
+        private async void BtnCancel_Cliked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

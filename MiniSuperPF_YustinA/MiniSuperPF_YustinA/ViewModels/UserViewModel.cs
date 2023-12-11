@@ -14,17 +14,17 @@ namespace MiniSuperPF_YustinA.ViewModels
         public Email MyEmail { get; set; }
         public RecoveryCode MyRecoveryCode { get; set; }
         public Service MyService { get; set; }
-        
+
         public UserRole MyUserRole { get; set; }
         public UserStatus MyUserStatus { get; set; }
         public User MyUser { get; set; }
         public UserDTO MyUserDTO { get; set; }
-        
-
-       
 
 
-    
+
+
+
+
 
 
         public UserViewModel()
@@ -36,7 +36,7 @@ namespace MiniSuperPF_YustinA.ViewModels
             MyEmail = new Email();
             MyRecoveryCode = new RecoveryCode();
             MyService = new Service();
-          
+
         }
 
         public async Task<UserDTO> GetUserData(string pEmail)
@@ -58,7 +58,7 @@ namespace MiniSuperPF_YustinA.ViewModels
                 {
                     return user;
                 }
-                
+
             }
             catch (Exception)
             {
@@ -273,7 +273,7 @@ namespace MiniSuperPF_YustinA.ViewModels
 
 
         public async Task<bool> UpdateUser(string pUser)
-          
+
         {
             if (IsBusy) return false;
             IsBusy = true;
@@ -301,12 +301,34 @@ namespace MiniSuperPF_YustinA.ViewModels
 
         }
 
-        internal Task<bool> UpdateUser(UserDTO localUser)
+        internal async Task<bool> UpdateUser(UserDTO pUser)
         {
-            throw new NotImplementedException();
+
+            if (IsBusy) return false;
+            IsBusy = true;
+
+            try
+            {
+                MyUserDTO = pUser;
+
+
+                bool R = await MyUserDTO.UpdateUser();
+                return R;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+
         }
     }
 }
+
 
 
 

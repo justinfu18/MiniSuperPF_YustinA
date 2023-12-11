@@ -1,20 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiniSuperPF_YustinA.Views.MyServiceListPage">
+             x:Class="MiniSuperPF_YustinA.Views.MyServiceListPage"
+                Shell.NavBarIsVisible="False"         
+            NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="ListServ.PNG">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Mi lista de Seervicios"
+            <Label Text="Mi lista de Servicios"
+                   TextColor="White"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                   FontAttributes="Bold"/>
 
-            <ListView x:Name="LstServiceList" RowHeight="200" SeparatorVisibility="Default" Background="Orange">
+            <ListView x:Name="LstServiceList" RowHeight="200" SeparatorVisibility="Default" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
 
                         <ImageCell Text="{Binding Notes}"
                                    Detail="{Binding ServiceDate}"
-                                   ImageSource="xamarin_logo"
+                                   ImageSource="carr.PNG"
                                    TextColor="Black"
                                    DetailColor="Black"/>
 
@@ -23,6 +28,15 @@
                 </ListView.ItemTemplate>
             </ListView>
 
+            <StackLayout Margin="0,60,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+
+                <Button x:Name="BtnCancel" Text="Regresar" BackgroundColor="Orange" 
+    TextColor="White" FontAttributes="Bold" CornerRadius="50"
+    WidthRequest="200" Clicked="BtnCancel_Cliked" 
+    FontSize="20" HorizontalOptions="CenterAndExpand" 
+    Padding="0,0,0,0" />
+
+            </StackLayout>
 
 
         </StackLayout>

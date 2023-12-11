@@ -23,7 +23,7 @@ namespace MiniSuperPF_YustinA.Models
                     System.Net.Mail.MailMessage email = new System.Net.Mail.MailMessage();
 
                     
-                    email.From = new System.Net.Mail.MailAddress("208140709@castrocarazo.ac.cr"); 
+                    email.From = new System.Net.Mail.MailAddress("yustin880@gmail.com"); 
                     
                     
                     email.Subject = Subject;
@@ -36,18 +36,20 @@ namespace MiniSuperPF_YustinA.Models
                     System.Net.Mail.SmtpClient server = new System.Net.Mail.SmtpClient();
                     server.Host = "smtp.gmail.com";
                     server.Port = 587;
+                    
+                    
 
                     server.EnableSsl = true;
                     server.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                    server.Credentials = new System.Net.NetworkCredential("208140709@castrocarazo.ac.cr", "Cc20010308");
+                    server.Credentials = new System.Net.NetworkCredential("yustin880@gmail.com", "thxnsvkbtrvxfnpx");
 
                     server.Send(email);
                     R = true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                string msg = ex.Message;
                 throw;
             }
             return R;
